@@ -9,127 +9,164 @@
 [![Email](https://img.shields.io/badge/Contacto-Directo-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jheisson_acuario96@hotmail.com)
 
 <p align="center">
-  <em>Estudiante de últimos ciclos de Ingeniería de Sistemas e Informática (Universidad Tecnológica del Perú, graduación prevista: dic. 2026).</em><br>
-  Enfocado en el diseño e implementación de sistemas empresariales transaccionales, APIs resilientes, arquitecturas basadas en roles (RBAC), control de identidades (IAM) y modelado relacional riguroso con PostgreSQL, React, TypeScript, Python y Flutter.
+  Desarrollador de software enfocado en la construcción de sistemas empresariales transaccionales, APIs REST resilientes, arquitecturas basadas en roles (RBAC) y modelado relacional riguroso con PostgreSQL, MySQL, React, TypeScript, Python y Flutter.
 </p>
 
 </div>
 
 ---
 
-### 🌐 Executive Summary (English)
-> **Systems & Computer Engineering student (Graduating Dec 2026 @ UTP, Peru)** focused on **Full Stack & Backend Engineering**. Hands-on experience building enterprise inventory & resource planning systems (ERP, HR/Attendance), real-time telecommunications platforms (Asterisk, WebRTC), and secure RESTful architectures using React, TypeScript, Next.js, Python (FastAPI/Flask), PostgreSQL, Supabase, and Flutter.
+### 🌐 Professional Overview (English)
+> **Software Engineer** specializing in **Full Stack & Backend Architecture**. Proven track record designing and implementing transactional business solutions, inventory ERP systems, real-time telecommunications platforms, and secure multi-tenant architectures using React, TypeScript, Next.js, Python (FastAPI, Flask), PostgreSQL, MySQL, and Flutter.
 
 ---
 
 ### 🏛️ Principios de Ingeniería / Engineering Principles
 
-- **Seguridad en la Capa de Datos:** Implementación de aislamiento a nivel de base de datos (*Row Level Security - RLS* en PostgreSQL/Supabase) y esquemas fuertemente tipados antes que delegar toda la integridad a la capa de aplicación.
-- **Testing Pragmático & Automatizado:** Construcción de pipelines de integración continua (CI) con suites de pruebas unitarias, de integración sobre bases de datos efímeras (*PGlite*) y pruebas End-to-End (*Playwright*).
-- **Arquitectura Basada en Dominio:** Separación estricta de responsabilidades, hashing criptográfico de contraseñas (*Argon2id*), firma de tokens JWT (*jose*) y manejo reactivo de estados en frontend y móvil (*Riverpod / TanStack*).
+- **Seguridad en la Capa de Datos:** Prioridad por el aislamiento de datos y control de accesos a nivel de base de datos (*Row Level Security - RLS* en PostgreSQL/Supabase, esquemas fuertemente tipados e índices transaccionales) antes que delegar toda la integridad a la capa de aplicación.
+- **Testing Pragmático & Automatizado:** Implementación de pipelines de integración continua (CI) con pruebas unitarias, validación de integración sobre bases de datos efímeras (*PGlite*) y pruebas End-to-End (*Playwright*).
+- **Diseño Tipado y Guiado por Dominio:** Separación rigurosa de responsabilidades, hashing criptográfico (*Argon2id*), firma de tokens JWT (*jose*) y consultas SQL compiladas y tipadas en tiempo de desarrollo (*Kysely*, *Prisma*).
 
 ---
 
-## 💼 Experiencia en Sistemas Empresariales (NDA Protected)
+## 💼 Confidential Enterprise Engineering Projects
 
-> *Por acuerdos de confidencialidad y propiedad intelectual, el código fuente de los siguientes sistemas se mantiene en repositorios privados. Se detallan exclusivamente las decisiones de arquitectura, desafíos técnicos y soluciones de ingeniería implementadas:*
+> *Sistemas empresariales propietarios actualmente en fase activa de construcción. Bajo prácticas estrictas de confidencialidad y propiedad intelectual, el código fuente y los datos productivos se mantienen privados. A continuación se detallan las decisiones de arquitectura, módulos implementados y rutas de desarrollo verificables:*
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 1. ERP Textil Industrial (Inventario Crudo, Despacho & Trazabilidad)        │
 ├──────────────────────────────────────────────────────────────────────────────┤
 │ • Stack: React + TypeScript + Supabase (PostgreSQL 16) + PGlite              │
-│ • Desafío: Trazabilidad en tiempo real de rollos textiles desde el ingreso   │
-│   a planta hasta el despacho mayorista, mitigando inconsistencias de stock. │
-│ • Solución de ingeniería:                                                   │
-│   - Motor de cálculo y conciliación de inventario con +60 tests automatizados│
-│     ejecutados en base de datos PostgreSQL local en memoria (PGlite).        │
-│   - Políticas RLS estrictas y migración de permisos para revocar privilegios │
-│     anónimos sobre secuencias y tablas críticas de negocio.                  │
-│   - Generación dinámica de rotulado técnico y códigos QR para planta.        │
+│ • Alcance: Control operativo y trazabilidad de rollos textiles desde el      │
+│   ingreso físico a almacén hasta el despacho mayorista.                      │
+│ • Funcionalidades Implementadas:                                             │
+│   - Motor de cálculo y conciliación de inventario con suite de +60 pruebas   │
+│     automatizadas ejecutadas en base de datos PostgreSQL en memoria (PGlite).│
+│   - Cutover de políticas RLS para revocar privilegios anónimos sobre tablas │
+│     y secuencias críticas de despacho y usuarios.                            │
+│   - Generación dinámica de rotulado técnico y códigos QR para operarios.     │
+│ • En Desarrollo / Roadmap:                                                   │
+│   - Módulo de facturación electrónica y sincronización bidireccional         │
+│     continua con sistemas contables existentes.                              │
 └──────────────────────────────────────────────────────────────────────────────┘
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 2. Sistema Integral de RRHH y Control de Asistencias                         │
 ├──────────────────────────────────────────────────────────────────────────────┤
 │ • Stack: TanStack Start (SSR) + TanStack Router + Kysely + Better Auth       │
-│ • Desafío: Centralizar la asistencia de personal, roles administrativos y    │
-│   generación de reportes de auditoría con alta velocidad de respuesta.       │
-│ • Solución de ingeniería:                                                   │
-│   - Consultas SQL compiladas y tipadas en tiempo de desarrollo (Kysely)      │
-│     sin la sobrecarga de consultas generadas por un ORM tradicional.         │
-│   - Hashing seguro de credenciales con Argon2id y sesión endurecida.         │
-│   - Pipeline de migración, seeding y verificación reproducible localmente.   │
+│ • Alcance: Centralización de asistencias de personal, jerarquía de roles     │
+│   administrativos y generación estructurada de auditoría operativa.          │
+│ • Funcionalidades Implementadas:                                             │
+│   - Arquitectura por capas (domain/application/infrastructure) con           │
+│     consultas SQL tipadas en tiempo de compilación mediante Kysely.          │
+│   - Autenticación endurecida con Better Auth, hashing Argon2id y sesiones    │
+│     protegidas contra CSRF con middleware específico.                        │
+│   - Motor inmutable de auditoría y ejecutor de migraciones con validación    │
+│     estricta de invariantes de seguridad en bases de datos locales.          │
+│ • En Desarrollo / Roadmap:                                                   │
+│   - Módulo de reportes consolidados de planillas y diseño de conector de     │
+│     solo lectura desacoplado para relojes biométricos (ZKBio Time).          │
 └──────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🔬 Proyectos Destacados de Código Abierto / Featured Case Studies
+## 🔬 Featured Projects / Engineering Case Studies
 
 ### 🏨 [NexoHotel — Property Management Platform (PMS)](https://github.com/JheissonLoor/nexohotel)
-*Plataforma web administrativa privada para hotelería real (gestión de habitaciones, huéspedes por DNI, caja diaria y auditoría).*
+*Plataforma web administrativa privada para la operación diaria hotelera (gestión de habitaciones, huéspedes por DNI, caja y auditoría).*
 
+- **Problema:** La administración hotelera requiere trazabilidad inmediata del estado de habitaciones y caja sin margen de descalce operativo.
 - **Stack:** `Next.js 15` · `TypeScript` · `Prisma ORM` · `PostgreSQL` · `Docker Compose` · `Playwright`
-- **Decisiones & Aportes Técnicos:**
-  - **Máquina de estados de habitación:** Gestión de ciclos de vida completos (`Disponible` → `Ocupada` → `Limpieza` → `Mantenimiento`).
-  - **Seguridad aplicada:** Hashing con **Argon2id**, tokens JWT criptográficamente firmados con librería **Jose** y protección de rutas con control de acceso basado en roles (RBAC).
-  - **DevOps & QA:** Suite de pruebas E2E con **Playwright**, containerización Docker multi-etapa y workflows de backup y CI en GitHub Actions.
+- **Funcionalidades Implementadas:**
+  - Máquina de estados finitos para ciclo de vida de habitación (`Disponible` → `Ocupada` → `Limpieza` → `Mantenimiento`).
+  - Registro y check-in/out de huéspedes por DNI, control de caja diaria y emisión de comprobantes.
+  - Autenticación con **Argon2id**, tokens JWT criptográficamente firmados con **Jose** y protección de rutas RBAC.
+- **Evidencias & Aportes Técnicos:**
+  - Suite de pruebas E2E con **Playwright** en `tests/`.
+  - Contenerización multi-etapa con Docker y pipelines de backup y CI en GitHub Actions.
+  - Diseño integral de esquema relacional y arquitectura Full Stack.
 
 ### 📡 [Unified Telecom QA Platform](https://github.com/JheissonLoor/Unified_Telecom_qa_platform_utp)
-*Plataforma de telecomunicaciones unificadas orientada a aseguramiento de la calidad bajo estándares ISO/IEC.*
+*Plataforma de comunicaciones unificadas con aseguramiento de calidad según estándares ISO/IEC.*
 
-- **Stack:** `Python` · `FastAPI` · `Asterisk PJSIP` · `SIP.js` · `midPoint (IAM)` · `coturn` · `PostgreSQL` · `Docker`
-- **Decisiones & Aportes Técnicos:**
-  - **Telefonía IP & WebRTC:** Orquestación de canal de señalización PJSIP en Asterisk integrado con clientes SIP en navegador web.
-  - **Gestión de Identidades (IAM):** Integración con **midPoint** para aprovisionamiento automatizado y sincronización centralizada de cuentas de usuario.
-  - **Pipeline de Calidad:** Quality Gates con GitHub Actions validando tipado, linters y 13 pruebas automatizadas.
+- **Problema:** Integrar servicios de voz/video IP con gestión centralizada de identidades bajo controles estrictos de calidad de software.
+- **Stack:** `Python (FastAPI)` · `Asterisk PJSIP` · `SIP.js` · `midPoint (IAM)` · `coturn` · `PostgreSQL` · `Docker`
+- **Funcionalidades Implementadas:**
+  - Canal de señalización PJSIP en Asterisk integrado con clientes SIP en navegador web mediante WebRTC.
+  - Sincronización y aprovisionamiento automatizado de cuentas de usuario con Evolveum midPoint.
+  - Reverse proxy Nginx y servidor STUN/TURN con coturn para conectividad NAT.
+- **Evidencias & Aportes Técnicos:**
+  - 13 pruebas automatizadas y Quality Gates en GitHub Actions (`quality.yml`).
+  - Orquestación de infraestructura multi-contenedor con Docker Compose.
 
 ### 🍽️ [UTTOF Restaurant — Multi-Tenant Foodservice Engine](https://github.com/JheissonLoor/UUTOF-restaurant)
-*Plataforma de gestión gastronómica multi-sucursal con pantallas de cocina en tiempo real (KDS).*
+*Plataforma gastronómica multi-sucursal con pantallas de cocina en tiempo real (KDS).*
 
-- **Stack:** `Python (FastAPI/Flask)` · `React` · `PostgreSQL` · `Tailwind CSS`
-- **Decisiones & Aportes Técnicos:**
-  - **Diseño Relacional Robusto:** 11 scripts de migración estructurados para soportar multi-local, configuración de empresa y estados transaccionales de comandas.
-  - **Módulos desacoplados:** Interfaces especializadas para Clientes (menú QR), Meseros (toma de pedidos), Cocina (KDS con cola de preparación) y Gerencia.
-  - **Localización Perú:** Moneda en PEN (S/), pagos QR vía Yape y formateo telefónico regional (+51).
+- **Problema:** Coordinar pedidos de salón, comandas de cocina y cobranza en locales gastronómicos con baja latencia y consistencia transaccional.
+- **Stack:** `Python (FastAPI)` · `React` · `MySQL / MariaDB (SQLAlchemy Asyncmy)` · `Tailwind CSS`
+- **Funcionalidades Implementadas:**
+  - Backend relacional asíncrono con 11 scripts de migración SQL para gestión multi-sucursal y configuración de locales.
+  - Pantalla de Cocina (KDS) con gestión de estados de preparación en tiempo real.
+  - Módulos desacoplados para Meseros (toma de comandas), Cocina y Administrador.
+  - Localización peruana: moneda PEN (S/), validación telefónica (+51) y flujo de pagos QR con Yape.
+- **Evidencias & Aportes Técnicos:**
+  - Arquitectura separada frontend/backend con motor asíncrono SQLAlchemy y pool de conexiones `asyncmy`.
 
 ### 📱 [Aethera — Real-Time Mobile Application](https://github.com/JheissonLoor/aethera)
-*Aplicación móvil con arquitectura limpia y sincronización reactiva en tiempo real para parejas a larga distancia.*
+*Aplicación móvil con arquitectura limpia y sincronización reactiva para comunicación de parejas a larga distancia.*
 
+- **Problema:** Mantener experiencias visuales fluidas y sincronización de presencia en tiempo real con tolerancia a desconexión de red.
 - **Stack:** `Flutter` · `Dart 3.7+` · `Riverpod 3.x` · `Firebase (Auth, Realtime DB, Cloud Messaging, Storage)`
-- **Decisiones & Aportes Técnicos:**
-  - **Arquitectura Modular:** Estructuración de carpetas orientada a características (*Feature-First*) impulsada por Riverpod.
-  - **Sincronización en la Nube:** Manejo de presencia activa, persistencia remota y notificaciones push asíncronas.
-  - **Testing & CI:** Suite de 11 pruebas unitarias y pipeline automatizado con GitHub Actions (`ci_flutter.yml`).
+- **Funcionalidades Implementadas:**
+  - Arquitectura modular orientada a características (*Feature-First*) impulsada por Riverpod.
+  - Cola de sincronización fuera de línea (`_offlineQueue`) para despacho de acciones al recuperar conectividad.
+  - Gestión de sesiones con Firebase Auth y notificaciones push con Cloud Messaging.
+- **En Desarrollo / Pendiente:**
+  - Integración extendida de servicios de analítica y sincronización persistente en segundo plano.
+- **Evidencias & Aportes Técnicos:**
+  - 11 pruebas unitarias y de widgets en `test/` con pipeline automatizado en GitHub Actions (`ci_flutter.yml`).
 
 ### 📊 [Tambo BI — DataMart Analítico & Dashboard](https://github.com/JheissonLoor/tambo-bi-grupo06)
 *DataMart en esquema copo de nieve con dashboard interactivo para análisis de promociones comerciales.*
 
+- **Contexto & Naturaleza:** Caso de estudio analítico colaborativo (proyecto académico grupal, UTP) desarrollado sobre un conjunto de datos sintéticos representativo de transacciones de conveniencia minorista (Sede UC).
 - **Stack:** `React` · `Vite` · `TypeScript` · `Supabase / PostgreSQL` · `Python` · `Vercel`
-- **Decisiones & Aportes Técnicos:**
-  - **Modelado Dimensional:** Diseño de modelo analítico en copo de nieve para optimización de consultas OLAP sobre promociones minoristas.
-  - **Despliegue Continuo:** Aplicación productiva desplegada en Vercel con integración a base de datos analítica.
+- **Funcionalidades Implementadas:**
+  - Modelo dimensional analítico en copo de nieve (tabla de hechos, dimensiones y subdimensiones de promociones y productos).
+  - Vistas analíticas SQL para evaluación de ticket promedio, márgenes de ganancia y elasticidad por campaña comercial.
+  - Dashboard web interactivo con despliegue productivo verificado en Vercel.
+- **Evidencias & Aportes Técnicos:**
+  - Esquemas de migración y scripts de verificación SQL reproducibles en `supabase/`.
 
 ---
 
-## 📊 Matriz de Competencias Técnicas / Technical Matrix
+## 📊 Competencias Técnicas / Technical Matrix
 
-| Dominio | Tecnologías Principales | Enfoque & Buenas Prácticas |
-| :--- | :--- | :--- |
-| **Backend & APIs** | Python (FastAPI, Flask), Node.js, TypeScript, Java (Spring Boot, Servlets/JSP) | Diseño RESTful, autenticación JWT/Argon2id, middlewares de auditoría, WebSockets/WebRTC. |
-| **Bases de Datos** | PostgreSQL 16, Supabase, Prisma ORM, Kysely, PGlite | Modelado relacional, esquemas dimensionales (Snowflake), Row Level Security (RLS), migraciones reproducibles. |
-| **Frontend & Web** | React, Next.js 15, TanStack Router/Start, Tailwind CSS | Server Components, tipado estricto en TypeScript, accesibilidad y renderizado eficiente. |
-| **Móvil** | Flutter, Dart 3.7+, Riverpod | Clean Architecture / Feature-First, sincronización en tiempo real y offline con Firebase. |
-| **DevOps & QA** | Docker, Docker Compose, GitHub Actions, Playwright, Pytest | Contenerización multi-etapa, pipelines de CI/CD, pruebas de integración y E2E. |
+```
+┌────────────────────────┬─────────────────────────────────────────────────────────────┐
+│ Dominio                │ Tecnologías de Trabajo Principal                            │
+├────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ Frontend & Web         │ React · TypeScript · JavaScript · Next.js 15 · Tailwind CSS │
+│ Backend & APIs         │ Python (FastAPI, Flask) · Node.js · RESTful API Design      │
+│ Bases de Datos         │ PostgreSQL 16 · Supabase · MySQL / MariaDB · Prisma · Kysely│
+│ Móvil                  │ Flutter · Dart 3.x · Riverpod                               │
+│ Calidad & DevOps       │ Git · GitHub Actions (CI/CD) · Docker · Playwright · Pytest │
+├────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ Dominio                │ Tecnologías Complementarias / Académicas                    │
+├────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ Backend Complementario │ Java · Spring Boot · Java Servlets / JSP · JDBC             │
+└────────────────────────┴─────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 🎓 Formación y Trayectoria
+## 🎓 Formación / Education
 
-- **Ingeniería de Sistemas e Informática** — Universidad Tecnológica del Perú (UTP)
-  *Ciclos finales · Graduación estimada: Diciembre 2026*
-- **Líneas de profundización técnica:** Arquitectura de software distribuido, seguridad defensiva en aplicaciones web, testing automatizado y modelado de datos transaccionales de alto rendimiento.
+- **Universidad Tecnológica del Perú (UTP)**
+  *Ingeniería de Sistemas e Informática · Estudios de pregrado en curso*
+- **Áreas de profundización técnica:** Arquitectura de software, diseño de bases de datos relacionales, seguridad defensiva en aplicaciones web y aseguramiento de la calidad de software (QA / testing automatizado).
 
 ---
 
