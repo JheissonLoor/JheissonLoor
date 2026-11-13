@@ -37,7 +37,7 @@ Desarrollo y modernización de plataformas operativas internas para la digitaliz
 #### 2. Sistema Integral de RR.HH. y Control de Asistencias *(En desarrollo activo)*
 - **Arquitectura Independiente:** Diseño de una aplicación desacoplada del ERP con arquitectura por capas (*domain / application / infrastructure*) basada en TanStack Start y TypeScript en modo estricto.
 - **Seguridad en Capa de Datos:** Implementación de consultas SQL fuertemente tipadas en tiempo de compilación con Kysely, autenticación local con Better Auth (hashing criptográfico Argon2id), protección contra CSRF y motor inmutable de auditoría para accesos y cambios de rol.
-- **Aislamiento Técnico:** Verificación local rigurosa mediante suites de pruebas automatizadas sobre entornos de base de datos efímeros y pipelines de integración continua (CI) en GitHub Actions bajo PostgreSQL 16 y 17.
+- **Aislamiento Técnico:** Verificación local rigurosa mediante suites de pruebas automatizadas sobre bases de datos en memoria (PGlite) y pipelines de integración continua (CI) en GitHub Actions bajo PostgreSQL 17.
 
 > *Nota de confidencialidad y estado: Ambos sistemas son desarrollos empresariales internos y confidenciales. No se exponen datos operativos, información de personal ni credenciales productivas. Módulos como la sincronización contable o la integración de lectura para relojes biométricos se encuentran en fase de diseño o pruebas sintéticas locales.*
 
@@ -59,28 +59,15 @@ Más allá de la codificación, mi enfoque de ingeniería prioriza la estabilida
 
 *Iniciativas tecnológicas y productos personales desarrollados de forma independiente:*
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│ 1. Aptelya — Global AI-Powered Learning Platform                                       │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ • Stack: React / Next.js · TypeScript · Supabase (PostgreSQL + RLS) · Redis · Worker   │
-│ • Descripción: Plataforma interactiva para el aprendizaje práctico de ingeniería de    │
-│   prompts e IA generativa. Cuenta con un corte vertical completo: diagnóstico, builder │
-│   interactivo, procesamiento en segundo plano con worker asíncrono y portafolio.       │
-│ • Enfoque: Arquitectura Full Stack modular, soporte multi-idioma nativo (ES, EN, PT)  │
-│   y sandbox determinista de evaluación para pruebas reproducibles sin costo de API.    │
-└────────────────────────────────────────────────────────────────────────────────────────┘
+### 🌐 [Aptelya — Global AI-Powered Learning Platform](https://github.com/JheissonLoor/World-AI-Academy)
+- **Stack:** `React / Next.js` · `TypeScript` · `Supabase (PostgreSQL + RLS)` · `Worker Asíncrono`
+- **Descripción:** Plataforma interactiva para el aprendizaje práctico de ingeniería de prompts e IA generativa. Cuenta con un corte vertical interactivo completo: diagnóstico de entrada, builder interactivo de prompts, procesamiento en segundo plano con worker asíncrono y portafolio de creaciones.
+- **Enfoque Técnico:** Arquitectura Full Stack modular, soporte multi-idioma nativo (ES, EN, PT) y sandbox determinista de evaluación para pruebas reproducibles sin costo de API externa.
 
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│ 2. Aulanza — Educational Technology Foundation                                         │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ • Stack: Monorepo reproducible (pnpm) · Python 3.11 / FastAPI (uv) · PostgreSQL 17     │
-│ • Descripción: Fundación de arquitectura para una plataforma pedagógica orientada a    │
-│   docentes peruanos, estructurada bajo estándares de diseño modular y tipado estricto. │
-│ • Enfoque: Contratos de API autogenerados, base de datos normalizada para metadatos    │
-│   normativos públicos y pipeline de validación local mediante contenedores Docker.     │
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
+### 📚 [Aulanza — Educational Technology Foundation](https://github.com/JheissonLoor/aulanza)
+- **Stack:** `Monorepo reproducible (pnpm)` · `Python 3.11 / FastAPI (uv)` · `PostgreSQL 17` · `Docker`
+- **Descripción:** Fundación de arquitectura técnica para una plataforma pedagógica orientada a docentes peruanos, estructurada bajo estándares de diseño modular y tipado estricto.
+- **Enfoque Técnico:** Contratos de API autogenerados, base de datos normalizada para metadatos normativos públicos y entorno reproducible validado localmente con contenedores Docker.
 
 ---
 
@@ -138,22 +125,18 @@ Más allá de la codificación, mi enfoque de ingeniería prioriza la estabilida
 
 ## 📊 Technical Competencies
 
-```
-┌────────────────────────┬─────────────────────────────────────────────────────────────┐
-│ Dominio                │ Tecnologías Principales (Producción y Desarrollo Activo)    │
-├────────────────────────┼─────────────────────────────────────────────────────────────┤
-│ Frontend & Web         │ TypeScript · React · Next.js 15 · Tailwind CSS · TanStack   │
-│ Backend & APIs         │ Python (FastAPI, Flask) · Node.js · RESTful Architecture    │
-│ Bases de Datos         │ PostgreSQL 16/17 · Supabase · MySQL / MariaDB · Kysely      │
-│ Móvil                  │ Flutter · Dart 3.x · Riverpod                               │
-│ Calidad & DevOps       │ Git · GitHub Actions (CI/CD) · Docker · Playwright · Vitest │
-├────────────────────────┼─────────────────────────────────────────────────────────────┤
-│ Dominio                │ Tecnologías Complementarias / Académicas                    │
-├────────────────────────┼─────────────────────────────────────────────────────────────┤
-│ Backend Complementario │ Java · Spring Boot · Java Servlets / JSP · Prisma ORM       │
-│ Almacenamiento & Otros │ MongoDB · SQLite · Redis                                    │
-└────────────────────────┴─────────────────────────────────────────────────────────────┘
-```
+| Dominio | Tecnologías Principales (Uso Diario y Desarrollo Activo) |
+| :--- | :--- |
+| **Frontend & Web** | TypeScript · React · Next.js 15 · Tailwind CSS · TanStack Router/Start |
+| **Backend & APIs** | Python (FastAPI, Flask) · Node.js · Diseño de Arquitecturas RESTful |
+| **Bases de Datos** | PostgreSQL 16/17 · Supabase · MySQL / MariaDB · Kysely |
+| **Móvil** | Flutter · Dart 3.x · Riverpod |
+| **Calidad & DevOps** | Git · GitHub Actions (CI/CD) · Docker · Playwright · Vitest · PGlite |
+
+| Dominio | Tecnologías Complementarias / Académicas |
+| :--- | :--- |
+| **Backend Complementario** | Java · Spring Boot · Java Servlets / JSP · Prisma ORM |
+| **Almacenamiento & Otros** | MongoDB · SQLite |
 
 ---
 
