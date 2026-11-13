@@ -59,14 +59,16 @@ Más allá de la codificación, mi enfoque de ingeniería prioriza la estabilida
 
 *Iniciativas tecnológicas y productos personales desarrollados de forma independiente:*
 
-### 🌐 [Aptelya — Global AI-Powered Learning Platform](https://github.com/JheissonLoor/World-AI-Academy)
+### 🌐 Aptelya — Global AI-Powered Learning Platform
+*Iniciativa independiente · Caso de estudio de arquitectura (código fuente privado por desarrollo activo)*
 - **Stack:** `React / Next.js` · `TypeScript` · `Supabase (PostgreSQL + RLS)` · `Worker Asíncrono`
-- **Descripción:** Plataforma interactiva para el aprendizaje práctico de ingeniería de prompts e IA generativa. Cuenta con un corte vertical interactivo completo: diagnóstico de entrada, builder interactivo de prompts, procesamiento en segundo plano con worker asíncrono y portafolio de creaciones.
+- **Arquitectura y Producto:** Plataforma interactiva para el aprendizaje práctico de ingeniería de prompts e IA generativa. Cuenta con un corte vertical interactivo completo: diagnóstico de entrada, builder interactivo de prompts, procesamiento en segundo plano con worker asíncrono y portafolio de creaciones.
 - **Enfoque Técnico:** Arquitectura Full Stack modular, soporte multi-idioma nativo (ES, EN, PT) y sandbox determinista de evaluación para pruebas reproducibles sin costo de API externa.
 
-### 📚 [Aulanza — Educational Technology Foundation](https://github.com/JheissonLoor/aulanza)
+### 📚 Aulanza — Educational Technology Foundation
+*Iniciativa independiente · Caso de estudio de arquitectura (código fuente privado por derechos de autor y desarrollo en curso)*
 - **Stack:** `Monorepo reproducible (pnpm)` · `Python 3.11 / FastAPI (uv)` · `PostgreSQL 17` · `Docker`
-- **Descripción:** Fundación de arquitectura técnica para una plataforma pedagógica orientada a docentes peruanos, estructurada bajo estándares de diseño modular y tipado estricto.
+- **Arquitectura y Producto:** Fundación de arquitectura técnica para una plataforma pedagógica orientada a docentes peruanos, estructurada bajo estándares de diseño modular y tipado estricto.
 - **Enfoque Técnico:** Contratos de API autogenerados, base de datos normalizada para metadatos normativos públicos y entorno reproducible validado localmente con contenedores Docker.
 
 ---
